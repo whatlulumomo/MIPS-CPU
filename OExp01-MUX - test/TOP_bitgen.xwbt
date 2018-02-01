@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Administrator\Desktop\FinalExe\OExp01-MUX - test\TOP.ncd
+OUTFILE=C:\Users\Administrator\Desktop\FinalExe\OExp01-MUX - test\TOP.bit
+FAMILY=Kintex7
+PART=xc7k160t-2lffg676
+WORKINGDIR=C:\Users\Administrator\Desktop\FinalExe\OExp01-MUX - test
+LICENSE=WebPack
+USER_INFO=__0_0_0

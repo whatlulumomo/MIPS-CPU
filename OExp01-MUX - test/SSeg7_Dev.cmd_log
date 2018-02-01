@@ -1,0 +1,6 @@
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/SSeg7_Dev_IO.v -lang verilog -prj OExp01-MUX -o SSeg7_Dev.spl -module SSeg7_Dev -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 SSeg7_Dev.spl C:/.Xilinx/jizu/OExp01-MUX/SSeg7_Dev.sym 
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/SSeg7_Dev_IO.v -lang verilog -prj OExp01-MUX -o SSeg7_Dev.spl -module SSeg7_Dev -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 SSeg7_Dev.spl C:/.Xilinx/jizu/OExp01-MUX/SSeg7_Dev.sym 
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/SSeg7_Dev_IO.v -lang verilog -prj OExp01-MUX -o SSeg7_Dev.spl -module SSeg7_Dev -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 SSeg7_Dev.spl C:/.Xilinx/jizu/OExp01-MUX/SSeg7_Dev.sym 

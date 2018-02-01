@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/cssystem/Final/Final/OExp01-MUX/bustest_isim_beh.exe" -prj "C:/cssystem/Final/Final/OExp01-MUX/bustest_beh.prj" "work.bustest" "work.glbl" 

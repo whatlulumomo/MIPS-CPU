@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family kintex7 -refsym MCPU C:/.Xilinx/jizu/OExp09-MCPU2SOC/OExp01-MUX/MCPU.sch C:/.Xilinx/jizu/OExp09-MCPU2SOC/OExp01-MUX/MCPU.sym 

@@ -1,0 +1,1 @@
+sch2hdl -sympath C:/cssystem/MultiCPU/OExp10-MCPU2SOC -sympath C:/cssystem/MultiCPU/OExp10-MCPU2SOC/OExp01-MUX/ipcore_dir -intstyle ise -family kintex7 -verilog MDPath_drc.vf -w C:/cssystem/MultiCPU/OExp10-MCPU2SOC/OExp01-MUX/MDPath.sch 

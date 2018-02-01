@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/GPIO_IO.v -lang verilog -prj OExp01-MUX -o GPIO.spl -module GPIO -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 GPIO.spl C:/.Xilinx/jizu/OExp01-MUX/GPIO.sym 

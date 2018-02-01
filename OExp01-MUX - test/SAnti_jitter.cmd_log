@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/SAnti_jitter_IO.v -lang verilog -prj OExp01-MUX -o SAnti_jitter.spl -module SAnti_jitter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 SAnti_jitter.spl C:/.Xilinx/jizu/OExp01-MUX/SAnti_jitter.sym 

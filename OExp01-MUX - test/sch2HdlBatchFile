@@ -1,0 +1,2 @@
+sch2hdl,-sympath,C:/Users/Administrator/Desktop/OExp01-MUX - test/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,C:/Users/Administrator/Desktop/OExp01-MUX - test/MDPath.vf,-w,C:/Users/Administrator/Desktop/OExp01-MUX - test/MDPath.sch
+sch2hdl,-sympath,C:/Users/Administrator/Desktop/OExp01-MUX - test/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,C:/Users/Administrator/Desktop/OExp01-MUX - test/MCPU.vf,-w,C:/Users/Administrator/Desktop/OExp01-MUX - test/MCPU.sch

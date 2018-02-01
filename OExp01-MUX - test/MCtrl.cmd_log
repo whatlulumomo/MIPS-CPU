@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp09-MCPU2SOC/OExp01-MUX/MCtrl_IO.v -lang verilog -prj OExp01-MUX -o MCtrl.spl -module MCtrl -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 MCtrl.spl C:/.Xilinx/jizu/OExp09-MCPU2SOC/OExp01-MUX/MCtrl.sym 

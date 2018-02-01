@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/Display_IO.v -lang verilog -prj OExp01-MUX -o Display.spl -module Display -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 Display.spl C:/.Xilinx/jizu/OExp01-MUX/Display.sym 

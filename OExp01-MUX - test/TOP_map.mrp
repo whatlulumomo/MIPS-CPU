@@ -1,0 +1,970 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'TOP'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+Target Device  : xc7k160t
+Target Package : ffg676
+Target Speed   : -2l
+Mapper Version : kintex7 -- $Revision: 1.55 $
+Mapped Date    : Sat Jun 17 10:16:48 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    5
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,680 out of 202,800    1%
+    Number used as Flip Flops:               1,632
+    Number used as Latches:                     48
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      3,127 out of 101,400    3%
+    Number used as logic:                    3,098 out of 101,400    3%
+      Number using O6 output only:           2,279
+      Number using O5 output only:             103
+      Number using O5 and O6:                  716
+      Number used as ROM:                        0
+    Number used as Memory:                       1 out of  35,000    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             1
+        Number using O6 output only:             1
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     28
+      Number with same-slice register load:     22
+      Number with same-slice carry load:         6
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,135 out of  25,350    4%
+  Number of LUT Flip Flop pairs used:        3,206
+    Number with an unused Flip Flop:         2,047 out of   3,206   63%
+    Number with an unused LUT:                  79 out of   3,206    2%
+    Number of fully used LUT-FF pairs:       1,080 out of   3,206   33%
+    Number of unique control sets:              44
+    Number of slice register sites lost
+      to control set restrictions:             231 out of 202,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        55 out of     400   13%
+    Number of LOCed IOBs:                       55 out of      55  100%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                 99 out of     325   30%
+    Number using RAMB36E1 only:                 99
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  1 out of     650    1%
+    Number using RAMB18E1 only:                  1
+    Number using FIFO18E1 only:                  0
+  Number of BUFG/BUFGCTRLs:                      8 out of      32   25%
+    Number used as BUFGs:                        8
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     400    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     400    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0 out of     150    0%
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     400    0%
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      32    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      32    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     120    0%
+  Number of BUFRs:                               0 out of      32    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            3 out of     600    1%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE2_CHANNELs:                      0 out of       8    0%
+  Number of GTXE2_COMMONs:                       0 out of       2    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       8    0%
+  Number of IN_FIFOs:                            0 out of      32    0%
+  Number of MMCME2_ADVs:                         0 out of       8    0%
+  Number of OUT_FIFOs:                           0 out of      32    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       8    0%
+  Number of PHY_CONTROLs:                        0 out of       8    0%
+  Number of PLLE2_ADVs:                          0 out of       8    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.56
+
+Peak Memory Usage:  1087 MB
+Total REAL time to MAP completion:  1 mins 5 secs 
+Total CPU time to MAP completion:   1 mins 5 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_29/XLXI_1/_n0116 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   XLXI_24/addr_bus[31]_GND_12_o_AND_2163_o11 is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   XLXI_24/addr_bus[31]_addr_bus[31]_AND_2195_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_24/_n0257 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_29/XLXN_11<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network XLXI_4/blink<7> has no load.
+INFO:LIT:395 - The above info message is repeated 21 more times for the
+   following (max. 5 shown):
+   XLXI_4/blink<6>,
+   XLXI_4/blink<5>,
+   XLXI_4/blink<4>,
+   XLXI_4/blink<3>,
+   XLXI_4/blink<2>
+   To see the details of these info messages, please use the -detail switch.
+INFO:Pack:1716 - Initializing temperature to 100.000 Celsius. (default - Range:
+   0.000 to 100.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.970 Volts. (default - Range: 0.970 to
+   1.030 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 261 block(s) removed
+  88 block(s) optimized away
+ 261 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_2/SW_OK<14>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_14_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_14_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_14" (FF) removed.
+The signal "XLXI_2/SW_OK<13>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_13_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_13_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_13" (FF) removed.
+The signal "XLXI_2/SW_OK<12>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_12_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_12_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_12" (FF) removed.
+The signal "XLXI_2/SW_OK<11>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_11_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_11_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_11" (FF) removed.
+The signal "XLXI_2/SW_OK<10>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_10_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_10_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_10" (FF) removed.
+The signal "XLXI_2/SW_OK<9>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_9_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_9_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_9" (FF) removed.
+The signal "XLXI_2/SW_OK<8>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/SW_OK_8_dpot1" (ROM) removed.
+  The signal "XLXI_2/SW_OK_8_dpot1" is sourceless and has been removed.
+   Sourceless block "XLXI_2/SW_OK_8" (FF) removed.
+The signal "XLXI_2/_n0225_inv1_cepot1" is sourceless and has been removed.
+ Sourceless block "XLXI_2/Key_out_0" (FF) removed.
+  The signal "XLXN_4<0>" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<0>" (ROM) removed.
+    The signal "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<0>" is sourceless and has
+been removed.
+     Sourceless block "XLXI_2/Key_out_0_dpot" (ROM) removed.
+      The signal "XLXI_2/Key_out_0_dpot" is sourceless and has been removed.
+   Sourceless block "XLXI_4/Ai_0_rstpot" (ROM) removed.
+    The signal "XLXI_4/Ai_0_rstpot" is sourceless and has been removed.
+     Sourceless block "XLXI_4/Ai_0" (FF) removed.
+      The signal "XLXI_4/Ai<0>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT231" (ROM) removed.
+        The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<2>" is sourceless and has been
+removed.
+         Sourceless block "XLXI_4/Ai_2_rstpot" (ROM) removed.
+          The signal "XLXI_4/Ai_2_rstpot" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Ai_2" (FF) removed.
+            The signal "XLXI_4/Ai<2>" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT291" (ROM) removed.
+              The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<6>" is sourceless and has been
+removed.
+               Sourceless block "XLXI_4/Ai_6_rstpot" (ROM) removed.
+                The signal "XLXI_4/Ai_6_rstpot" is sourceless and has been removed.
+                 Sourceless block "XLXI_4/Ai_6" (FF) removed.
+                  The signal "XLXI_4/Ai<6>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT21" (ROM) removed.
+                    The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<10>" is sourceless and has been
+removed.
+                     Sourceless block "XLXI_4/Ai_10_rstpot" (ROM) removed.
+                      The signal "XLXI_4/Ai_10_rstpot" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Ai_10" (FF) removed.
+                        The signal "XLXI_4/Ai<10>" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT61" (ROM) removed.
+                          The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<14>" is sourceless and has been
+removed.
+                           Sourceless block "XLXI_4/Ai_14_rstpot" (ROM) removed.
+                            The signal "XLXI_4/Ai_14_rstpot" is sourceless and has been removed.
+                             Sourceless block "XLXI_4/Ai_14" (FF) removed.
+                              The signal "XLXI_4/Ai<14>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT101" (ROM) removed.
+                                The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<18>" is sourceless and has been
+removed.
+                                 Sourceless block "XLXI_4/Ai_18_rstpot" (ROM) removed.
+                                  The signal "XLXI_4/Ai_18_rstpot" is sourceless and has been removed.
+                                   Sourceless block "XLXI_4/Ai_18" (FF) removed.
+                                    The signal "XLXI_4/Ai<18>" is sourceless and has been removed.
+                                     Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT151" (ROM) removed.
+                                      The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<22>" is sourceless and has been
+removed.
+                                       Sourceless block "XLXI_4/Ai_22_rstpot" (ROM) removed.
+                                        The signal "XLXI_4/Ai_22_rstpot" is sourceless and has been removed.
+                                         Sourceless block "XLXI_4/Ai_22" (FF) removed.
+                                          The signal "XLXI_4/Ai<22>" is sourceless and has been removed.
+                                           Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT191" (ROM) removed.
+                                            The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<26>" is sourceless and has been
+removed.
+                                             Sourceless block "XLXI_4/Ai_26_rstpot" (ROM) removed.
+                                              The signal "XLXI_4/Ai_26_rstpot" is sourceless and has been removed.
+                                               Sourceless block "XLXI_4/Ai_26" (FF) removed.
+                                                The signal "XLXI_4/Ai<26>" is sourceless and has been removed.
+                                                 Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT241" (ROM) removed.
+*The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<30>" is sourceless and has been
+removed.
+* Sourceless block "XLXI_4/Ai_30_rstpot" (ROM) removed.
+*  The signal "XLXI_4/Ai_30_rstpot" is sourceless and has been removed.
+*   Sourceless block "XLXI_4/Ai_30" (FF) removed.
+*    The signal "XLXI_4/Ai<30>" is sourceless and has been removed.
+*     Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT25" (ROM) removed.
+*      The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<31>" is sourceless and has been
+removed.
+*       Sourceless block "XLXI_4/Ai_31" (FF) removed.
+*        The signal "XLXI_4/Ai<31>" is sourceless and has been removed.
+                                                 Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT20" (ROM) removed.
+*The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<27>" is sourceless and has been
+removed.
+* Sourceless block "XLXI_4/Ai_27" (FF) removed.
+*  The signal "XLXI_4/Ai<27>" is sourceless and has been removed.
+                                           Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT16" (ROM) removed.
+                                            The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<23>" is sourceless and has been
+removed.
+                                             Sourceless block "XLXI_4/Ai_23" (FF) removed.
+                                              The signal "XLXI_4/Ai<23>" is sourceless and has been removed.
+                                     Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT11" (ROM) removed.
+                                      The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<19>" is sourceless and has been
+removed.
+                                       Sourceless block "XLXI_4/Ai_19" (FF) removed.
+                                        The signal "XLXI_4/Ai<19>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT7" (ROM) removed.
+                                The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<15>" is sourceless and has been
+removed.
+                                 Sourceless block "XLXI_4/Ai_15" (FF) removed.
+                                  The signal "XLXI_4/Ai<15>" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT3_SW0" (ROM) removed.
+                          The signal "XLXI_4/N01" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT3" (ROM) removed.
+                            The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<11>" is sourceless and has been
+removed.
+                             Sourceless block "XLXI_4/Ai_11" (FF) removed.
+                              The signal "XLXI_4/Ai<11>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT30" (ROM) removed.
+                    The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<7>" is sourceless and has been
+removed.
+                     Sourceless block "XLXI_4/Ai_7" (FF) removed.
+                      The signal "XLXI_4/Ai<7>" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT26" (ROM) removed.
+              The signal "XLXI_4/Ai[31]_Ai[31]_mux_48_OUT<3>" is sourceless and has been
+removed.
+               Sourceless block "XLXI_4/Ai_3" (FF) removed.
+                The signal "XLXI_4/Ai<3>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT26_SW0" (ROM) removed.
+        The signal "XLXI_4/N12" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Ai_4_rstpot" (ROM) removed.
+        The signal "XLXI_4/Ai_4_rstpot" is sourceless and has been removed.
+         Sourceless block "XLXI_4/Ai_4" (FF) removed.
+          The signal "XLXI_4/Ai<4>" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT30_SW0" (ROM) removed.
+            The signal "XLXI_4/N14" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Ai_8_rstpot" (ROM) removed.
+            The signal "XLXI_4/Ai_8_rstpot" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Ai_8" (FF) removed.
+              The signal "XLXI_4/Ai<8>" is sourceless and has been removed.
+               Sourceless block "XLXI_4/Ai_12_rstpot" (ROM) removed.
+                The signal "XLXI_4/Ai_12_rstpot" is sourceless and has been removed.
+                 Sourceless block "XLXI_4/Ai_12" (FF) removed.
+                  The signal "XLXI_4/Ai<12>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT7_SW0" (ROM) removed.
+                    The signal "XLXI_4/N2" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Ai_16_rstpot" (ROM) removed.
+                    The signal "XLXI_4/Ai_16_rstpot" is sourceless and has been removed.
+                     Sourceless block "XLXI_4/Ai_16" (FF) removed.
+                      The signal "XLXI_4/Ai<16>" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT11_SW0" (ROM) removed.
+                        The signal "XLXI_4/N4" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Ai_20_rstpot" (ROM) removed.
+                        The signal "XLXI_4/Ai_20_rstpot" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Ai_20" (FF) removed.
+                          The signal "XLXI_4/Ai<20>" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT16_SW0" (ROM) removed.
+                            The signal "XLXI_4/N6" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Ai_24_rstpot" (ROM) removed.
+                            The signal "XLXI_4/Ai_24_rstpot" is sourceless and has been removed.
+                             Sourceless block "XLXI_4/Ai_24" (FF) removed.
+                              The signal "XLXI_4/Ai<24>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT20_SW0" (ROM) removed.
+                                The signal "XLXI_4/N8" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Ai_28_rstpot" (ROM) removed.
+                                The signal "XLXI_4/Ai_28_rstpot" is sourceless and has been removed.
+                                 Sourceless block "XLXI_4/Ai_28" (FF) removed.
+                                  The signal "XLXI_4/Ai<28>" is sourceless and has been removed.
+                                   Sourceless block "XLXI_4/Mmux_Ai[31]_Ai[31]_mux_48_OUT25_SW0" (ROM) removed.
+                                    The signal "XLXI_4/N10" is sourceless and has been removed.
+                                   Sourceless block "XLXI_4/Ai_29_rstpot" (ROM) removed.
+                                    The signal "XLXI_4/Ai_29_rstpot" is sourceless and has been removed.
+                                     Sourceless block "XLXI_4/Ai_29" (FF) removed.
+                                      The signal "XLXI_4/Ai<29>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Ai_25_rstpot" (ROM) removed.
+                                The signal "XLXI_4/Ai_25_rstpot" is sourceless and has been removed.
+                                 Sourceless block "XLXI_4/Ai_25" (FF) removed.
+                                  The signal "XLXI_4/Ai<25>" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Ai_21_rstpot" (ROM) removed.
+                            The signal "XLXI_4/Ai_21_rstpot" is sourceless and has been removed.
+                             Sourceless block "XLXI_4/Ai_21" (FF) removed.
+                              The signal "XLXI_4/Ai<21>" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Ai_17_rstpot" (ROM) removed.
+                        The signal "XLXI_4/Ai_17_rstpot" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Ai_17" (FF) removed.
+                          The signal "XLXI_4/Ai<17>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Ai_13_rstpot" (ROM) removed.
+                    The signal "XLXI_4/Ai_13_rstpot" is sourceless and has been removed.
+                     Sourceless block "XLXI_4/Ai_13" (FF) removed.
+                      The signal "XLXI_4/Ai<13>" is sourceless and has been removed.
+               Sourceless block "XLXI_4/Ai_9_rstpot" (ROM) removed.
+                The signal "XLXI_4/Ai_9_rstpot" is sourceless and has been removed.
+                 Sourceless block "XLXI_4/Ai_9" (FF) removed.
+                  The signal "XLXI_4/Ai<9>" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Ai_5_rstpot" (ROM) removed.
+            The signal "XLXI_4/Ai_5_rstpot" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Ai_5" (FF) removed.
+              The signal "XLXI_4/Ai<5>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Ai_1_rstpot" (ROM) removed.
+        The signal "XLXI_4/Ai_1_rstpot" is sourceless and has been removed.
+         Sourceless block "XLXI_4/Ai_1" (FF) removed.
+          The signal "XLXI_4/Ai<1>" is sourceless and has been removed.
+   Sourceless block "XLXI_4/Bi_0_rstpot" (ROM) removed.
+    The signal "XLXI_4/Bi_0_rstpot" is sourceless and has been removed.
+     Sourceless block "XLXI_4/Bi_0" (FF) removed.
+      The signal "XLXI_4/Bi<0>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT231" (ROM) removed.
+        The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<2>" is sourceless and has been
+removed.
+         Sourceless block "XLXI_4/Bi_2_rstpot" (ROM) removed.
+          The signal "XLXI_4/Bi_2_rstpot" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Bi_2" (FF) removed.
+            The signal "XLXI_4/Bi<2>" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT291" (ROM) removed.
+              The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<6>" is sourceless and has been
+removed.
+               Sourceless block "XLXI_4/Bi_6_rstpot" (ROM) removed.
+                The signal "XLXI_4/Bi_6_rstpot" is sourceless and has been removed.
+                 Sourceless block "XLXI_4/Bi_6" (FF) removed.
+                  The signal "XLXI_4/Bi<6>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT21" (ROM) removed.
+                    The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<10>" is sourceless and has been
+removed.
+                     Sourceless block "XLXI_4/Bi_10_rstpot" (ROM) removed.
+                      The signal "XLXI_4/Bi_10_rstpot" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Bi_10" (FF) removed.
+                        The signal "XLXI_4/Bi<10>" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT61" (ROM) removed.
+                          The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<14>" is sourceless and has been
+removed.
+                           Sourceless block "XLXI_4/Bi_14_rstpot" (ROM) removed.
+                            The signal "XLXI_4/Bi_14_rstpot" is sourceless and has been removed.
+                             Sourceless block "XLXI_4/Bi_14" (FF) removed.
+                              The signal "XLXI_4/Bi<14>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT101" (ROM) removed.
+                                The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<18>" is sourceless and has been
+removed.
+                                 Sourceless block "XLXI_4/Bi_18_rstpot" (ROM) removed.
+                                  The signal "XLXI_4/Bi_18_rstpot" is sourceless and has been removed.
+                                   Sourceless block "XLXI_4/Bi_18" (FF) removed.
+                                    The signal "XLXI_4/Bi<18>" is sourceless and has been removed.
+                                     Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT151" (ROM) removed.
+                                      The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<22>" is sourceless and has been
+removed.
+                                       Sourceless block "XLXI_4/Bi_22_rstpot" (ROM) removed.
+                                        The signal "XLXI_4/Bi_22_rstpot" is sourceless and has been removed.
+                                         Sourceless block "XLXI_4/Bi_22" (FF) removed.
+                                          The signal "XLXI_4/Bi<22>" is sourceless and has been removed.
+                                           Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT191" (ROM) removed.
+                                            The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<26>" is sourceless and has been
+removed.
+                                             Sourceless block "XLXI_4/Bi_26_rstpot" (ROM) removed.
+                                              The signal "XLXI_4/Bi_26_rstpot" is sourceless and has been removed.
+                                               Sourceless block "XLXI_4/Bi_26" (FF) removed.
+                                                The signal "XLXI_4/Bi<26>" is sourceless and has been removed.
+                                                 Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT241" (ROM) removed.
+*The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<30>" is sourceless and has been
+removed.
+* Sourceless block "XLXI_4/Bi_30_rstpot" (ROM) removed.
+*  The signal "XLXI_4/Bi_30_rstpot" is sourceless and has been removed.
+*   Sourceless block "XLXI_4/Bi_30" (FF) removed.
+*    The signal "XLXI_4/Bi<30>" is sourceless and has been removed.
+*     Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT25" (ROM) removed.
+*      The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<31>" is sourceless and has been
+removed.
+*       Sourceless block "XLXI_4/Bi_31" (FF) removed.
+*        The signal "XLXI_4/Bi<31>" is sourceless and has been removed.
+                                                 Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT20" (ROM) removed.
+*The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<27>" is sourceless and has been
+removed.
+* Sourceless block "XLXI_4/Bi_27" (FF) removed.
+*  The signal "XLXI_4/Bi<27>" is sourceless and has been removed.
+                                           Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT16" (ROM) removed.
+                                            The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<23>" is sourceless and has been
+removed.
+                                             Sourceless block "XLXI_4/Bi_23" (FF) removed.
+                                              The signal "XLXI_4/Bi<23>" is sourceless and has been removed.
+                                     Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT11" (ROM) removed.
+                                      The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<19>" is sourceless and has been
+removed.
+                                       Sourceless block "XLXI_4/Bi_19" (FF) removed.
+                                        The signal "XLXI_4/Bi<19>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT7" (ROM) removed.
+                                The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<15>" is sourceless and has been
+removed.
+                                 Sourceless block "XLXI_4/Bi_15" (FF) removed.
+                                  The signal "XLXI_4/Bi<15>" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT3_SW0" (ROM) removed.
+                          The signal "XLXI_4/N16" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT3" (ROM) removed.
+                            The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<11>" is sourceless and has been
+removed.
+                             Sourceless block "XLXI_4/Bi_11" (FF) removed.
+                              The signal "XLXI_4/Bi<11>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT30" (ROM) removed.
+                    The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<7>" is sourceless and has been
+removed.
+                     Sourceless block "XLXI_4/Bi_7" (FF) removed.
+                      The signal "XLXI_4/Bi<7>" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT26" (ROM) removed.
+              The signal "XLXI_4/Bi[31]_Bi[31]_mux_49_OUT<3>" is sourceless and has been
+removed.
+               Sourceless block "XLXI_4/Bi_3" (FF) removed.
+                The signal "XLXI_4/Bi<3>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT26_SW0" (ROM) removed.
+        The signal "XLXI_4/N28" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Bi_4_rstpot" (ROM) removed.
+        The signal "XLXI_4/Bi_4_rstpot" is sourceless and has been removed.
+         Sourceless block "XLXI_4/Bi_4" (FF) removed.
+          The signal "XLXI_4/Bi<4>" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT30_SW0" (ROM) removed.
+            The signal "XLXI_4/N30" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Bi_8_rstpot" (ROM) removed.
+            The signal "XLXI_4/Bi_8_rstpot" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Bi_8" (FF) removed.
+              The signal "XLXI_4/Bi<8>" is sourceless and has been removed.
+               Sourceless block "XLXI_4/Bi_12_rstpot" (ROM) removed.
+                The signal "XLXI_4/Bi_12_rstpot" is sourceless and has been removed.
+                 Sourceless block "XLXI_4/Bi_12" (FF) removed.
+                  The signal "XLXI_4/Bi<12>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT7_SW0" (ROM) removed.
+                    The signal "XLXI_4/N18" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Bi_16_rstpot" (ROM) removed.
+                    The signal "XLXI_4/Bi_16_rstpot" is sourceless and has been removed.
+                     Sourceless block "XLXI_4/Bi_16" (FF) removed.
+                      The signal "XLXI_4/Bi<16>" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT11_SW0" (ROM) removed.
+                        The signal "XLXI_4/N20" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Bi_20_rstpot" (ROM) removed.
+                        The signal "XLXI_4/Bi_20_rstpot" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Bi_20" (FF) removed.
+                          The signal "XLXI_4/Bi<20>" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT16_SW0" (ROM) removed.
+                            The signal "XLXI_4/N22" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Bi_24_rstpot" (ROM) removed.
+                            The signal "XLXI_4/Bi_24_rstpot" is sourceless and has been removed.
+                             Sourceless block "XLXI_4/Bi_24" (FF) removed.
+                              The signal "XLXI_4/Bi<24>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT20_SW0" (ROM) removed.
+                                The signal "XLXI_4/N24" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Bi_28_rstpot" (ROM) removed.
+                                The signal "XLXI_4/Bi_28_rstpot" is sourceless and has been removed.
+                                 Sourceless block "XLXI_4/Bi_28" (FF) removed.
+                                  The signal "XLXI_4/Bi<28>" is sourceless and has been removed.
+                                   Sourceless block "XLXI_4/Mmux_Bi[31]_Bi[31]_mux_49_OUT25_SW0" (ROM) removed.
+                                    The signal "XLXI_4/N26" is sourceless and has been removed.
+                                   Sourceless block "XLXI_4/Bi_29_rstpot" (ROM) removed.
+                                    The signal "XLXI_4/Bi_29_rstpot" is sourceless and has been removed.
+                                     Sourceless block "XLXI_4/Bi_29" (FF) removed.
+                                      The signal "XLXI_4/Bi<29>" is sourceless and has been removed.
+                               Sourceless block "XLXI_4/Bi_25_rstpot" (ROM) removed.
+                                The signal "XLXI_4/Bi_25_rstpot" is sourceless and has been removed.
+                                 Sourceless block "XLXI_4/Bi_25" (FF) removed.
+                                  The signal "XLXI_4/Bi<25>" is sourceless and has been removed.
+                           Sourceless block "XLXI_4/Bi_21_rstpot" (ROM) removed.
+                            The signal "XLXI_4/Bi_21_rstpot" is sourceless and has been removed.
+                             Sourceless block "XLXI_4/Bi_21" (FF) removed.
+                              The signal "XLXI_4/Bi<21>" is sourceless and has been removed.
+                       Sourceless block "XLXI_4/Bi_17_rstpot" (ROM) removed.
+                        The signal "XLXI_4/Bi_17_rstpot" is sourceless and has been removed.
+                         Sourceless block "XLXI_4/Bi_17" (FF) removed.
+                          The signal "XLXI_4/Bi<17>" is sourceless and has been removed.
+                   Sourceless block "XLXI_4/Bi_13_rstpot" (ROM) removed.
+                    The signal "XLXI_4/Bi_13_rstpot" is sourceless and has been removed.
+                     Sourceless block "XLXI_4/Bi_13" (FF) removed.
+                      The signal "XLXI_4/Bi<13>" is sourceless and has been removed.
+               Sourceless block "XLXI_4/Bi_9_rstpot" (ROM) removed.
+                The signal "XLXI_4/Bi_9_rstpot" is sourceless and has been removed.
+                 Sourceless block "XLXI_4/Bi_9" (FF) removed.
+                  The signal "XLXI_4/Bi<9>" is sourceless and has been removed.
+           Sourceless block "XLXI_4/Bi_5_rstpot" (ROM) removed.
+            The signal "XLXI_4/Bi_5_rstpot" is sourceless and has been removed.
+             Sourceless block "XLXI_4/Bi_5" (FF) removed.
+              The signal "XLXI_4/Bi<5>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Bi_1_rstpot" (ROM) removed.
+        The signal "XLXI_4/Bi_1_rstpot" is sourceless and has been removed.
+         Sourceless block "XLXI_4/Bi_1" (FF) removed.
+          The signal "XLXI_4/Bi<1>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/Key_out_1" (FF) removed.
+  The signal "XLXN_4<1>" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<1>" (ROM) removed.
+    The signal "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<1>" is sourceless and has
+been removed.
+     Sourceless block "XLXI_2/Key_out_1_dpot" (ROM) removed.
+      The signal "XLXI_2/Key_out_1_dpot" is sourceless and has been removed.
+ Sourceless block "XLXI_2/Key_out_2" (FF) removed.
+  The signal "XLXN_4<2>" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_out_2_dpot" (ROM) removed.
+    The signal "XLXI_2/Key_out_2_dpot" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<2>" (MUX) removed.
+    The signal "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<2>" is sourceless and has
+been removed.
+ Sourceless block "XLXI_2/Key_out_3" (FF) removed.
+  The signal "XLXN_4<3>" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_out_3_dpot" (ROM) removed.
+    The signal "XLXI_2/Key_out_3_dpot" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<3>" (MUX) removed.
+    The signal "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<3>" is sourceless and has
+been removed.
+The signal "XLXI_2/Key_out_4_dpot" is sourceless and has been removed.
+ Sourceless block "XLXI_2/Key_out_4" (FF) removed.
+  The signal "XLXN_4<4>" is sourceless and has been removed.
+   Sourceless block "XLXI_2/Key_out_4_dpot" (ROM) removed.
+The signal "XLXI_2/N15" is sourceless and has been removed.
+The signal "XLXI_2/_n0308" is sourceless and has been removed.
+The signal "XLXI_2/N154" is sourceless and has been removed.
+The signal "XLXI_2/N155" is sourceless and has been removed.
+The signal "XLXI_2/N156" is sourceless and has been removed.
+The signal "XLXI_2/N157" is sourceless and has been removed.
+The signal "XLXI_4/blink<7>" is sourceless and has been removed.
+The signal "XLXI_4/blink<6>" is sourceless and has been removed.
+The signal "XLXI_4/blink<5>" is sourceless and has been removed.
+The signal "XLXI_4/blink<4>" is sourceless and has been removed.
+The signal "XLXI_4/blink<3>" is sourceless and has been removed.
+The signal "XLXI_4/blink<2>" is sourceless and has been removed.
+The signal "XLXI_4/blink<1>" is sourceless and has been removed.
+The signal "XLXI_4/blink<0>" is sourceless and has been removed.
+The signal "XLXI_4/get_B<0>" is sourceless and has been removed.
+ Sourceless block "XLXI_4/get_B_1" (FF) removed.
+  The signal "XLXI_4/get_B<1>" is sourceless and has been removed.
+   Sourceless block "XLXI_4/_n0187_inv12" (ROM) removed.
+    The signal "XLXI_4/_n0187_inv11" is sourceless and has been removed.
+     Sourceless block "XLXI_4/_n0187_inv13" (ROM) removed.
+      The signal "XLXI_4/_n0187_inv" is sourceless and has been removed.
+     Sourceless block "XLXI_4/_n0176_inv13" (ROM) removed.
+      The signal "XLXI_4/_n0176_inv" is sourceless and has been removed.
+     Sourceless block "XLXI_4/_n0187_inv13_1" (ROM) removed.
+      The signal "XLXI_4/_n0187_inv13" is sourceless and has been removed.
+     Sourceless block "XLXI_4/_n0176_inv13_1" (ROM) removed.
+      The signal "XLXI_4/_n0176_inv13" is sourceless and has been removed.
+The signal "XLXI_4/push" is sourceless and has been removed.
+ Sourceless block "XLXI_4/state_0" (FF) removed.
+  The signal "XLXI_4/state<0>" is sourceless and has been removed.
+   Sourceless block "XLXI_4/Result<2>1" (ROM) removed.
+    The signal "XLXI_4/Result<2>" is sourceless and has been removed.
+     Sourceless block "XLXI_4/state_2" (FF) removed.
+      The signal "XLXI_4/state<2>" is sourceless and has been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT1101" (ROM)
+removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT110" is sourceless and
+has been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT2711" (ROM)
+removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT271" is sourceless and
+has been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT3111" (ROM)
+removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT311" is sourceless and
+has been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT411" (ROM) removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT41" is sourceless and has
+been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT811" (ROM) removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT81" is sourceless and has
+been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT1311" (ROM)
+removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT131" is sourceless and
+has been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT1711" (ROM)
+removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT171" is sourceless and
+has been removed.
+       Sourceless block "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT2111" (ROM)
+removed.
+        The signal "XLXI_4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT211" is sourceless and
+has been removed.
+       Sourceless block "XLXI_4/Mmux_blink81" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink71" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink61" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink51" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink41" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink31" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink21" (ROM) removed.
+       Sourceless block "XLXI_4/Mmux_blink11" (ROM) removed.
+   Sourceless block "XLXI_4/Result<1>1" (ROM) removed.
+    The signal "XLXI_4/Result<1>" is sourceless and has been removed.
+     Sourceless block "XLXI_4/state_1" (FF) removed.
+      The signal "XLXI_4/state<1>" is sourceless and has been removed.
+   Sourceless block "XLXI_4/Result<0>1_INV_0" (BUF) removed.
+    The signal "XLXI_4/Result<0>" is sourceless and has been removed.
+The signal "XLXI_4/n0001_inv" is sourceless and has been removed.
+The signal "XLXI_4/_n0187_inv1" is sourceless and has been removed.
+The signal "XLXI_4/_n0176_inv1" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<13>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<12>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<11>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<10>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<9>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<8>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<7>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<6>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<5>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<4>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<3>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<2>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<1>" is sourceless and has been removed.
+The signal "XLXI_17/GPIOf0<0>" is sourceless and has been removed.
+The signal "XLXI_17/_n0028_inv" is sourceless and has been removed.
+ Sourceless block "XLXI_17/GPIOf0_0" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_1" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_2" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_3" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_4" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_5" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_6" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_7" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_8" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_9" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_10" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_11" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_12" (FF) removed.
+ Sourceless block "XLXI_17/GPIOf0_13" (FF) removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "XLXI_23/MUX2_Blink/XLXI_112/XLXN_74" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_112/XLXI_4" (AND) removed.
+  The signal "XLXI_23/MUX2_Blink/XLXI_112/XLXN_5" is unused and has been removed.
+   Unused block "XLXI_23/MUX2_Blink/XLXI_112/XLXI_3" (BUF) removed.
+  The signal "XLXI_23/MUX2_Blink/XLXI_112/XLXN_6" is unused and has been removed.
+   Unused block "XLXI_23/MUX2_Blink/XLXI_112/XLXI_2" (BUF) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_112/XLXN_78" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_112/XLXI_5" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_112/XLXN_69" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_112/XLXI_7" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_112/XLXN_81" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_112/XLXI_6" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_110/XLXN_74" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_110/XLXI_4" (AND) removed.
+  The signal "XLXI_23/MUX2_Blink/XLXI_110/XLXN_5" is unused and has been removed.
+   Unused block "XLXI_23/MUX2_Blink/XLXI_110/XLXI_3" (BUF) removed.
+  The signal "XLXI_23/MUX2_Blink/XLXI_110/XLXN_6" is unused and has been removed.
+   Unused block "XLXI_23/MUX2_Blink/XLXI_110/XLXI_2" (BUF) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_110/XLXN_78" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_110/XLXI_5" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_110/XLXN_69" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_110/XLXI_7" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_110/XLXN_81" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_110/XLXI_6" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_111/XLXN_78" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_111/XLXI_5" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_111/XLXN_69" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_111/XLXI_7" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_111/XLXN_81" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_111/XLXI_6" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_109/XLXN_78" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_109/XLXI_5" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_109/XLXN_69" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_109/XLXI_7" (AND) removed.
+The signal "XLXI_23/MUX2_Blink/XLXI_109/XLXN_81" is unused and has been removed.
+ Unused block "XLXI_23/MUX2_Blink/XLXI_109/XLXI_6" (AND) removed.
+Unused block "XLXI_17/_n0028_inv1" (ROM) removed.
+Unused block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<1>_SW0" (ROM) removed.
+Unused block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<2>_F" (ROM) removed.
+Unused block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<2>_G" (ROM) removed.
+Unused block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<3>_F" (ROM) removed.
+Unused block "XLXI_2/Key_x[4]_Key_out[4]_select_75_OUT<3>_G" (ROM) removed.
+Unused block "XLXI_2/_n0225_inv1_cepot1_INV_0" (BUF) removed.
+Unused block "XLXI_2/_n03081" (ROM) removed.
+Unused block "XLXI_4/_n0176_inv11" (ROM) removed.
+Unused block "XLXI_4/_n0187_inv11" (ROM) removed.
+Unused block "XLXI_4/get_B_0" (FF) removed.
+Unused block "XLXI_4/n0001_inv1" (ROM) removed.
+Unused block "XLXI_4/push1" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		U04/P01/XST_GND
+VCC 		U04/P01/XST_VCC
+GND 		U04/P02/XST_GND
+VCC 		U04/P02/XST_VCC
+GND 		U04/P03/XST_GND
+VCC 		U04/P03/XST_VCC
+GND 		XLXI_10/XST_GND
+VCC 		XLXI_10/XST_VCC
+VCC 		XLXI_13
+GND 		XLXI_14
+BUF 		XLXI_16
+VCC 		XLXI_17/XST_VCC
+GND 		XLXI_2/XST_GND
+VCC 		XLXI_2/XST_VCC
+GND 		XLXI_22/XST_GND
+VCC 		XLXI_22/XST_VCC
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_10
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_11
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_14
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_15
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_16
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_19
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_20
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_21
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_24
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_25
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_26
+AND2 		XLXI_23/MUX2_Blink/XLXI_109/XLXI_9
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_10
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_11
+OR4 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_12
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_13
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_14
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_15
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_16
+OR4 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_17
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_18
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_19
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_20
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_21
+OR4 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_22
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_23
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_24
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_25
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_26
+OR4 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_27
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_8
+AND2 		XLXI_23/MUX2_Blink/XLXI_110/XLXI_9
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_10
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_11
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_14
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_15
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_16
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_19
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_20
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_21
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_24
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_25
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_26
+AND2 		XLXI_23/MUX2_Blink/XLXI_111/XLXI_9
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_10
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_11
+OR4 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_12
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_13
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_14
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_15
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_16
+OR4 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_17
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_18
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_19
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_20
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_21
+OR4 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_22
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_23
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_24
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_25
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_26
+OR4 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_27
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_8
+AND2 		XLXI_23/MUX2_Blink/XLXI_112/XLXI_9
+AND2 		XLXI_23/MUX2_Blink/XLXI_47
+AND2 		XLXI_23/MUX2_Blink/XLXI_48
+AND2 		XLXI_23/MUX2_Blink/XLXI_49
+AND2 		XLXI_23/MUX2_Blink/XLXI_50
+AND2 		XLXI_23/MUX2_Blink/XLXI_55
+AND2 		XLXI_23/MUX2_Blink/XLXI_56
+AND2 		XLXI_23/MUX2_Blink/XLXI_57
+AND2 		XLXI_23/MUX2_Blink/XLXI_58
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Buzzer                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| CR                                 | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| K_COL<0>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| K_COL<1>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| K_COL<2>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| K_COL<3>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| K_ROW<0>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| K_ROW<1>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| K_ROW<2>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| K_ROW<3>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| K_ROW<4>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| LEDCLK                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LEDCLR                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LEDDT                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LEDEN                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| RDY                                | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| RSTN                               | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| SEGCLK                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SEGCLR                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SEGDT                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SEGEN                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SW<0>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<1>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<2>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<3>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<4>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<5>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<6>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<7>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<8>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<9>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<10>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<11>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<12>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<13>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<14>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<15>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| blue<0>                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| blue<1>                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| blue<2>                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| blue<3>                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| clk_100mhz                         | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| green<0>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| green<1>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| green<2>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| green<3>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| h_sync                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ps2c                               | IOB33            | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| ps2d                               | IOB33            | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| readn                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| red<0>                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| red<1>                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| red<2>                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| red<3>                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| v_sync                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

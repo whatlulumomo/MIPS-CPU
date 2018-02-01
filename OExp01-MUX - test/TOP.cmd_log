@@ -1,0 +1,74 @@
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.xst" -ofn "C:/Users/Administrator/Desktop/FinalExe/OExp01-MUX - test/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 

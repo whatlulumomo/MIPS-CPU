@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/.Xilinx/jizu/OExp01-MUX/srl32.v -lang verilog -prj OExp01-MUX -o srl32.spl -module srl32 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 srl32.spl C:/.Xilinx/jizu/OExp01-MUX/srl32.sym 

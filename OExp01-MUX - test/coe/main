@@ -1,0 +1,37 @@
+Initial:
+addi $s0,$zero,1281 // s0 : x address in bus
+addi $s1,$zero,1282 // s1 : y address in bus
+addi $s7,$zero,1280 // s7 : ps2 address 1280
+
+Start:
+lw   $t7,0($s7)   // t7 is ps2 value
+lw	$t0,0($s0)   //t0 is x
+lw   $t1,0($s1)   // t1 is y
+Left:
+addi $t6,$t7,-7196 // A = 1c1c
+bne  $t6,$zero,Right
+addi $t0,$t0,1
+sw	$t0,0($s0)
+Right:
+addi $t6,$t7,-8995 // D = 2323 = 8995
+bne  $t6,$zero,UP
+addi $t0,$t0,1
+sw	$t0,0($s0)
+UP:
+addi $t6,$t7,-7453
+bne  $t6,$zero,DOWN // W = 1d1d = 7453
+addi $t1,$t1,1
+sw	$t0,0($s1)
+DOWN:
+addi $t6,$t7,-6939
+bne  $t6,$zero,ENDPS // S = 1b1b = 6939
+addi $t1,$t1,1
+sw	$t0,0($s1)
+ENDPS:
+j    Start
+
+
+
+
+
+
